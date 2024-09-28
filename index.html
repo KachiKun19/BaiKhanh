@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create CV</title>
+    <style>
+      /* CSS bắt đầu */
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #4caf50; /* Green header */
+        color: white;
+        padding: 10px 20px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      #loginSection {
+        background-color: #007bff; /* Ocean blue */
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      form {
+        background-color: #6a5acd; /* Purple blue */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin: 10px 0 5px;
+        color: white;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="file"],
+      input[type="password"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f9f9f9; /* Light background for better contrast */
+        color: #333; /* Dark text for readability */
+      }
+
+      button {
+        background-color: #4caf50; /* Green button */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      button:focus {
+        outline: 2px solid #333;
+      }
+
+      #preview {
+        margin-top: 10px;
+        max-width: 150px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        display: none;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #333;
+        color: white;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        nav ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav ul li {
+          margin-bottom: 10px;
+        }
+
+        button {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+
+      /* Additional Styles for CV Preview */
+      #cvPreview {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #cvPreview img {
+        max-width: 150px;
+        border-radius: 4px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#" id="signInBtn">Sign In</a></li>
+          <li><a href="#" id="logOutBtn" style="display: none">Log Out</a></li>
+          <li><a href="#" id="homeLink">Home</a></li>
+          <li><a href="#" id="aboutLink">About</a></li>
+          <li><a href="#" id="labsLink">Labs</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="loginSection">
+        <h2>Login or Register</h2>
+        <form id="loginForm">
+          <label for="username">Username:</label>
+          <input type="text" id="username" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" required />
+
+          <button type="submit">Login</button>
+          <button type="button" id="registerBtn">Register</button>
+        </form>
+      </section>
+
+      <section id="home" style="display: none">
+        <h1>Welcome to the CV Creator</h1>
+        <form id="cvForm">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" />
+
+          <label for="role">Role:</label>
+          <select id="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+          </select>
+
+          <label for="profilePicture">Profile Picture:</label>
+          <input type="file" id="profilePicture" accept="image/*" />
+          <img id="preview" src="#" alt="Image Preview" />
+
+          <label for="education">Education:</label>
+          <textarea
+            id="education"
+            rows="2"
+            placeholder="e.g., Bachelor of Science in Computer Science"
+          ></textarea>
+
+          <label for="careerGoals">Career Goals:</label>
+          <textarea
+            id="careerGoals"
+            rows="2"
+            placeholder="e.g., To become a software engineer..."
+          ></textarea>
+
+          <label for="skills">Skills:</label>
+          <textarea
+            id="skills"
+            rows="4"
+            placeholder="e.g., JavaScript, HTML, CSS"
+          ></textarea>
+
+          <label for="interests">Interests:</label>
+          <textarea
+            id="interests"
+            rows="4"
+            placeholder="e.g., Reading, Traveling, Coding"
+          ></textarea>
+
+          <label for="experience">Work Experience:</label>
+          <textarea id="experience" rows="4"></textarea>
+
+          <button type="submit">Create CV</button>
+          <button type="button" id="editBtn" style="display: none">
+            Edit CV
+          </button>
+          <button type="button" id="deleteBtn" style="display: none">
+            Delete CV
+          </button>
+          <button type="button" id="cancelBtn">Cancel</button>
+        </form>
+      </section>
+
+      <section id="cvPreview" style="display: none">
+        <h2>Your CV Preview</h2>
+        <div id="previewContent"></div>
+      </section>
+
+      <section id="about" style="display: none">
+        <h2>About</h2>
+        <p>Information about us and the services we provide.</p>
+      </section>
+
+      <section id="labs" style="display: none">
+        <h2>Labs</h2>
+        <p>Explore tools and resources to help you create your CV.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 CV Creator. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // JavaScript bắt đầu
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Elements
+        const signInBtn = document.getElementById("signInBtn");
+        const logOutBtn = document.getElementById("logOutBtn");
+        const homeLink = document.getElementById("homeLink");
+        const aboutLink = document.getElementById("aboutLink");
+        const labsLink = document.getElementById("labsLink");
+
+        const loginSection = document.getElementById("loginSection");
+        const homeSection = document.getElementById("home");
+        const aboutSection = document.getElementById("about");
+        const labsSection = document.getElementById("labs");
+        const cvPreviewSection = document.getElementById("cvPreview");
+
+        const loginForm = document.getElementById("loginForm");
+        const registerBtn = document.getElementById("registerBtn");
+        const logOut = document.getElementById("logOutBtn");
+
+        const cvForm = document.getElementById("cvForm");
+        const previewImage = document.getElementById("preview");
+        const previewContent = document.getElementById("previewContent");
+        const editBtn = document.getElementById("editBtn");
+        const deleteBtn = document.getElementById("deleteBtn");
+        const cancelBtn = document.getElementById("cancelBtn");
+
+        // User Authentication (Simplified for Demo)
+        let isLoggedIn = false;
+        let user = {};
+
+        // Navigation
+        function showSection(section) {
+          loginSection.style.display = "none";
+          homeSection.style.display = "none";
+          aboutSection.style.display = "none";
+          labsSection.style.display = "none";
+          cvPreviewSection.style.display = "none";
+
+          section.style.display = "block";
+        }
+
+        signInBtn.addEventListener("click", () => {
+          showSection(loginSection);
+        });
+
+        logOutBtn.addEventListener("click", () => {
+          isLoggedIn = false;
+          user = {};
+          signInBtn.style.display = "inline";
+          logOutBtn.style.display = "none";
+          showSection(loginSection);
+        });
+
+        homeLink.addEventListener("click", () => {
+          if (isLoggedIn) {
+            showSection(homeSection);
+          } else {
+            showSection(loginSection);
+          }
+        });
+
+        aboutLink.addEventListener("click", () => {
+          showSection(aboutSection);
+        });
+
+        labsLink.addEventListener("click", () => {
+          showSection(labsSection);
+        });
+
+        // Login Form Submission
+        loginForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const username = document.getElementById("username").value.trim();
+          const password = document.getElementById("password").value.trim();
+
+          // Simple authentication (Replace with real authentication)
+          if (username && password) {
+            isLoggedIn = true;
+            user.username = username;
+            signInBtn.style.display = "none";
+            logOutBtn.style.display = "inline";
+            showSection(homeSection);
+            loginForm.reset();
+          } else {
+            alert("Please enter valid credentials.");
+          }
+        });
+
+        // Register Button
+        registerBtn.addEventListener("click", () => {
+          alert("Registration feature is not implemented yet.");
+        });
+
+        // CV Form Submission
+        cvForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          // Collect form data
+          const fullName = document.getElementById("fullName").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const role = document.getElementById("role").value;
+          const profilePicture =
+            document.getElementById("profilePicture").files[0];
+          const education = document.getElementById("education").value.trim();
+          const careerGoals = document
+            .getElementById("careerGoals")
+            .value.trim();
+          const skills = document.getElementById("skills").value.trim();
+          const interests = document.getElementById("interests").value.trim();
+          const experience = document.getElementById("experience").value.trim();
+
+          // Simple validation
+          if (!fullName || !email || !role) {
+            alert("Please fill in all required fields.");
+            return;
+          }
+
+          // Create CV Preview
+          let cvHTML = `<h3>${fullName}</h3>`;
+          cvHTML += `<p><strong>Email:</strong> ${email}</p>`;
+          if (phone) cvHTML += `<p><strong>Phone:</strong> ${phone}</p>`;
+          cvHTML += `<p><strong>Role:</strong> ${role}</p>`;
+
+          if (profilePicture) {
+            const reader = new FileReader();
+            reader.onload = function (event) {
+              cvHTML += `<img src="${event.target.result}" alt="Profile Picture">`;
+              appendAdditionalInfo();
+            };
+            reader.readAsDataURL(profilePicture);
+          } else {
+            appendAdditionalInfo();
+          }
+
+          function appendAdditionalInfo() {
+            if (education)
+              cvHTML += `<p><strong>Education:</strong> ${education}</p>`;
+            if (careerGoals)
+              cvHTML += `<p><strong>Career Goals:</strong> ${careerGoals}</p>`;
+            if (skills) cvHTML += `<p><strong>Skills:</strong> ${skills}</p>`;
+            if (interests)
+              cvHTML += `<p><strong>Interests:</strong> ${interests}</p>`;
+            if (experience)
+              cvHTML += `<p><strong>Work Experience:</strong> ${experience}</p>`;
+
+            previewContent.innerHTML = cvHTML;
+            showSection(cvPreviewSection);
+            toggleCVButtons(true);
+          }
+
+          // Store CV data (You can enhance this to use localStorage or a backend)
+          user.cv = {
+            fullName,
+            email,
+            phone,
+            role,
+            profilePicture: profilePicture
+              ? URL.createObjectURL(profilePicture)
+              : null,
+            education,
+            careerGoals,
+            skills,
+            interests,
+            experience,
+          };
+        });
+
+        // Image Preview
+        const profilePictureInput = document.getElementById("profilePicture");
+        profilePictureInput.addEventListener("change", function () {
+          const file = this.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (event) {
+              previewImage.setAttribute("src", event.target.result);
+              previewImage.style.display = "block";
+            };
+            reader.readAsDataURL(file);
+          } else {
+            previewImage.setAttribute("src", "#");
+            previewImage.style.display = "none";
+          }
+        });
+
+        // Edit CV
+        editBtn.addEventListener("click", () => {
+          showSection(homeSection);
+          populateForm(user.cv);
+          toggleCVButtons(false);
+        });
+
+        // Delete CV
+        deleteBtn.addEventListener("click", () => {
+          if (confirm("Are you sure you want to delete your CV?")) {
+            user.cv = null;
+            previewContent.innerHTML = "";
+            showSection(homeSection);
+            cvForm.reset();
+            previewImage.setAttribute("src", "#");
+            previewImage.style.display = "none";
+            toggleCVButtons(false);
+            alert("Your CV has been deleted.");
+          }
+        });
+
+        // Cancel Button
+        cancelBtn.addEventListener("click", () => {
+          if (user.cv) {
+            showSection(cvPreviewSection);
+          } else {
+            cvForm.reset();
+          }
+        });
+
+        // Populate form for editing
+        function populateForm(cv) {
+          document.getElementById("fullName").value = cv.fullName;
+          document.getElementById("email").value = cv.email;
+          document.getElementById("phone").value = cv.phone;
+          document.getElementById("role").value = cv.role;
+          document.getElementById("education").value = cv.education;
+          document.getElementById("careerGoals").value = cv.careerGoals;
+          document.getElementById("skills").value = cv.skills;
+          document.getElementById("interests").value = cv.interests;
+          document.getElementById("experience").value = cv.experience;
+
+          if (cv.profilePicture) {
+            previewImage.setAttribute("src", cv.profilePicture);
+            previewImage.style.display = "block";
+          } else {
+            previewImage.setAttribute("src", "#");
+            previewImage.style.display = "none";
+          }
+        }
+
+        // Toggle CV Buttons
+        function toggleCVButtons(show) {
+          if (show) {
+            editBtn.style.display = "inline-block";
+            deleteBtn.style.display = "inline-block";
+          } else {
+            editBtn.style.display = "none";
+            deleteBtn.style.display = "none";
+          }
+        }
+
+        // Initial View
+        if (isLoggedIn) {
+          signInBtn.style.display = "none";
+          logOutBtn.style.display = "inline";
+          showSection(homeSection);
+        } else {
+          showSection(loginSection);
+        }
+      });
+
+      // JavaScript kết thúc
+    </script>
+  </body>
+</html>
