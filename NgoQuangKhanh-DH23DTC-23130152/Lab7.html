@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create CV</title>
+    <link rel="stylesheet" href="styles7.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="signInBtn">Sign In</a></li>
+                <li><a href="#" id="logOutBtn" style="display:none;">Log Out</a></li>
+                <li><a href="#" id="homeLink">Home</a></li>
+                <li><a href="#" id="aboutLink">About</a></li>
+                <li><a href="#" id="labsLink">Labs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="loginSection">
+            <h2>Login or Register</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                
+                <button type="submit">Login</button>
+                <button type="button" id="registerBtn">Register</button>
+            </form>
+        </section>
+
+        <section id="home" style="display:none;">
+            <h1>Welcome to the CV Creator</h1>
+            <form id="cvForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone">
+
+                <label for="role">Role:</label>
+                <select id="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                    <option value="developer">Developer</option>
+                    <option value="designer">Designer</option>
+                </select>
+
+                <label for="profilePicture">Profile Picture:</label>
+                <input type="file" id="profilePicture" accept="image/*">
+                <img id="preview" src="#" alt="Image Preview" style="display:none; margin-top:10px; max-width: 100px;"/>
+
+                <label for="education">Education:</label>
+                <textarea id="education" rows="2" placeholder="e.g., Bachelor of Science in Computer Science"></textarea>
+
+                <label for="careerGoals">Career Goals:</label>
+                <textarea id="careerGoals" rows="2" placeholder="e.g., To become a software engineer..."></textarea>
+
+                <label for="skills">Skills:</label>
+                <textarea id="skills" rows="4" placeholder="e.g., JavaScript, HTML, CSS"></textarea>
+
+                <label for="interests">Interests:</label>
+                <textarea id="interests" rows="4" placeholder="e.g., Reading, Traveling, Coding"></textarea>
+
+                <label for="experience">Work Experience:</label>
+                <textarea id="experience" rows="4"></textarea>
+
+                <button type="submit">Create CV</button>
+                <button type="button" id="editBtn" style="display:none;">Edit CV</button>
+                <button type="button" id="deleteBtn" style="display:none;">Delete CV</button>
+                <button type="button" id="cancelBtn">Cancel</button>
+            </form>
+        </section>
+
+        <section id="cvPreview" style="display:none;">
+            <h2>Your CV Preview</h2>
+            <div id="previewContent"></div>
+        </section>
+
+        <section id="about" style="display:none;">
+            <h2>About</h2>
+            <p>Information about us and the services we provide.</p>
+        </section>
+
+        <section id="labs" style="display:none;">
+            <h2>Labs</h2>
+            <p>Explore tools and resources to help you create your CV.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CV Creator. All rights reserved.</p>
+    </footer>
+
+    <script src="script7.js"></script>
+</body>
+</html>
