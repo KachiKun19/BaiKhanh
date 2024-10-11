@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles1.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="login-logout">
+          <button id="login-btn">Login</button>
+          <button id="signup-btn">Sign Up</button>
+          <button id="logout-btn" style="display: none">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="login-form">
+        <input type="text" placeholder="Username" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <button id="show-signup">Sign Up</button></p>
+    </div>
+
+    <div class="signup-container" style="display: none">
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Username" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+
+    <div class="dashboard" style="display: none">
+      <h2>Available Exercises</h2>
+      <input
+        type="text"
+        id="search-keyword"
+        placeholder="Search exercises..."
+      />
+      <select id="filter-language">
+        <option value="all">All Languages</option>
+        <option value="c">C</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+      </select>
+
+      <div class="exercise-category" data-language="c">
+        <h3>C Programming</h3>
+        <div class="exercise" data-status="not-started">
+          <h4>Title: Arrays</h4>
+          <p>Description: Learn about arrays in C.</p>
+          <p>Difficulty: Easy</p>
+          <p>Time Limit: 30 minutes</p>
+          <p>Points: 10</p>
+          <p>Status: Not Started</p>
+          <button
+            class="select-exercise"
+            data-title="Arrays"
+            data-description="Learn about arrays in C."
+            data-language="c"
+          >
+            Select
+          </button>
+        </div>
+      </div>
+
+      <div class="exercise-category" data-language="python">
+        <h3>Python</h3>
+        <div class="exercise" data-status="not-started">
+          <h4>Title: Data Structures</h4>
+          <p>Description: Explore Python data structures.</p>
+          <p>Difficulty: Medium</p>
+          <p>Time Limit: 45 minutes</p>
+          <p>Points: 20</p>
+          <p>Status: Not Started</p>
+          <button
+            class="select-exercise"
+            data-title="Data Structures"
+            data-description="Explore Python data structures."
+            data-language="python"
+          >
+            Select
+          </button>
+        </div>
+      </div>
+
+      <div class="exercise-category" data-language="java">
+        <h3>Java</h3>
+        <div class="exercise" data-status="not-started">
+          <h4>Title: OOP Basics</h4>
+          <p>
+            Description: Understand the basics of Object-Oriented Programming.
+          </p>
+          <p>Difficulty: Hard</p>
+          <p>Time Limit: 60 minutes</p>
+          <p>Points: 30</p>
+          <p>Status: Not Started</p>
+          <button
+            class="select-exercise"
+            data-title="OOP Basics"
+            data-description="Understand the basics of Object-Oriented Programming."
+            data-language="java"
+          >
+            Select
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="coding-environment" style="display: none">
+      <button id="back-btn">Back</button>
+      <h2 id="exercise-title">Exercise Title</h2>
+      <p id="exercise-description">Exercise Description</p>
+      <textarea id="code-editor" rows="20" cols="80"></textarea>
+      <div>
+        <button id="run-code">Run Code</button>
+        <button id="clear-code">Clear Code</button>
+        <button id="submit-code">Submit</button>
+      </div>
+      <pre id="output"></pre>
+      <div id="results" style="display: none">
+        <h3>Submission Results</h3>
+        <p>Status: <span id="status"></span></p>
+        <p>Time Taken: <span id="time-taken"></span></p>
+        <p>Memory Used: <span id="memory-used"></span></p>
+        <div id="test-cases">
+          <h4>Test Cases</h4>
+          <!-- Test cases will be populated here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts1.js"></script>
+  </body>
+</html>
