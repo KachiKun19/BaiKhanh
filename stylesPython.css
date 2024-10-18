@@ -1,0 +1,98 @@
+/* Tổng quan chung */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #e6f7ff; /* Nền xanh nhạt */
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2980b9; /* Màu xanh đậm cho tiêu đề */
+}
+
+/* Khóa học */
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.course-item {
+  background-color: #d0ebff; /* Màu xanh nhạt cho khóa học */
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.course-item:hover {
+  background-color: #b3daff; /* Hiệu ứng hover màu xanh đậm hơn */
+}
+
+.course-title {
+  font-size: 1.2rem;
+  color: #2980b9; /* Màu xanh đậm cho tiêu đề khóa học */
+}
+
+.course-details {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+/* Các bài học */
+.lessons {
+  display: none;
+  margin-left: 20px;
+}
+
+.lesson-item {
+  background-color: #cce7ff; /* Nền xanh nhạt cho bài học */
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.lesson-item:hover {
+  background-color: #a6d4ff; /* Hover xanh đậm hơn */
+}
+
+.lesson-duration {
+  font-size: 0.9rem;
+  color: #636e72;
+}
+
+/* Hiệu ứng */
+.course-item,
+.lesson-item {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.course-item:hover,
+.lesson-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="stylesPython.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Courses Python</h1>
+      <div class="course-list">
+        <div class="course-item" onclick="toggleLessons('lesson1')">
+          <div class="course-title">1. Python Tutorial</div>
+          <div class="course-details">10 bài học</div>
+        </div>
+        <div class="lessons" id="lesson1">
+          <div class="lesson-item">
+            1. Python Getting Started
+            <span class="lesson-duration">03:15</span>
+          </div>
+          <div class="lesson-item">
+            2. Comments <span class="lesson-duration">02:29</span>
+          </div>
+          <div class="lesson-item">
+            3. Variables <span class="lesson-duration">03:55</span>
+          </div>
+          <div class="lesson-item">
+            4. Data Types
+            <span class="lesson-duration">02:57</span>
+          </div>
+          <div class="lesson-item">
+            5. Operators
+            <span class="lesson-duration">04:03</span>
+          </div>
+          <div class="lesson-item">
+            6. Lists
+            <span class="lesson-duration">01:00</span>
+          </div>
+          <div class="lesson-item">
+            7. If ... Else
+            <span class="lesson-duration">01:00</span>
+          </div>
+          <div class="lesson-item">
+            8. While Loops
+            <span class="lesson-duration">03:00</span>
+          </div>
+          <div class="lesson-item">
+            9. For Loops
+            <span class="lesson-duration">03:00</span>
+          </div>
+          <div class="lesson-item">
+            10. Arrays
+            <span class="lesson-duration">05:00</span>
+          </div>
+        </div>
+
+        <div class="course-item" onclick="toggleLessons('lesson2')">
+          <div class="course-title">2. File Handling</div>
+          <div class="course-details">4 bài học</div>
+        </div>
+        <div class="lessons" id="lesson2">
+          <div class="lesson-item">
+            1. File Handling
+            <span class="lesson-duration">03:05</span>
+          </div>
+          <div class="lesson-item">
+            2. File Read <span class="lesson-duration">01:20</span>
+          </div>
+          <div class="lesson-item">
+            3. Write/Create a New File
+            <span class="lesson-duration">02:55</span>
+          </div>
+          <div class="lesson-item">
+            4. Delete a File
+            <span class="lesson-duration">01:02</span>
+          </div>
+        </div>
+
+        <div class="course-item" onclick="toggleLessons('lesson3')">
+          <div class="course-title">3. Python Modules</div>
+          <div class="course-details">4 bài học</div>
+        </div>
+        <div class="lessons" id="lesson3">
+          <div class="lesson-item">
+            1. NumPy Tutorial
+            <span class="lesson-duration">05:50</span>
+          </div>
+          <div class="lesson-item">
+            2. Pandas Tutorial <span class="lesson-duration">02:20</span>
+          </div>
+          <div class="lesson-item">
+            3. SciPy Tutorial
+            <span class="lesson-duration">03:55</span>
+          </div>
+          <div class="lesson-item">
+            4. Django Tutorial
+            <span class="lesson-duration">02:02</span>
+          </div>
+        </div>
+
+        <div class="course-item" onclick="toggleLessons('lesson4')">
+          <div class="course-title">4. Python Matplotlib</div>
+          <div class="course-details">7 bài học</div>
+        </div>
+        <div class="lessons" id="lesson4">
+          <div class="lesson-item">
+            1. Getting Started
+            <span class="lesson-duration">04:50</span>
+          </div>
+          <div class="lesson-item">
+            2. Plotting <span class="lesson-duration">02:52</span>
+          </div>
+          <div class="lesson-item">
+            3. Line
+            <span class="lesson-duration">01:40</span>
+          </div>
+          <div class="lesson-item">
+            4. Labels and Title
+            <span class="lesson-duration">04:00</span>
+          </div>
+          <div class="lesson-item">
+            5. Adding Grid Lines
+            <span class="lesson-duration">03:50</span>
+          </div>
+          <div class="lesson-item">
+            6. Scatter
+            <span class="lesson-duration">05:40</span>
+          </div>
+          <div class="lesson-item">
+            7. Histograms
+            <span class="lesson-duration">04:30</span>
+          </div>
+        </div>
+        <div class="course-item" onclick="toggleLessons('lesson5')">
+          <div class="course-title">5. Machine Learning</div>
+          <div class="course-details">12 bài học</div>
+        </div>
+        <div class="lessons" id="lesson5">
+          <div class="lesson-item">
+            1. Data Set
+            <span class="lesson-duration">04:20</span>
+          </div>
+          <div class="lesson-item">
+            2. Standard Deviation <span class="lesson-duration">03:43</span>
+          </div>
+          <div class="lesson-item">
+            3. Data Distribution
+            <span class="lesson-duration">05:40</span>
+          </div>
+          <div class="lesson-item">
+            4. Scatter Plot
+            <span class="lesson-duration">04:55</span>
+          </div>
+          <div class="lesson-item">
+            5. Polynomial Regression
+            <span class="lesson-duration">06:10</span>
+          </div>
+          <div class="lesson-item">
+            6. Scale
+            <span class="lesson-duration">03:40</span>
+          </div>
+          <div class="lesson-item">
+            7. Decision Tree
+            <span class="lesson-duration">04:30</span>
+          </div>
+          <div class="lesson-item">
+            8. Logistic Regression
+            <span class="lesson-duration">05:20</span>
+          </div>
+          <div class="lesson-item">
+            9. Grid Search
+            <span class="lesson-duration">04:30</span>
+          </div>
+          <div class="lesson-item">
+            10. K-means
+            <span class="lesson-duration">02:20</span>
+          </div>
+          <div class="lesson-item">
+            11. Cross Validation
+            <span class="lesson-duration">02:10</span>
+          </div>
+          <div class="lesson-item">
+            12. AUC - ROC Curve
+            <span class="lesson-duration">05:50</span>
+          </div>
+        </div>
+        <div class="course-item" onclick="toggleLessons('lesson6')">
+          <div class="course-title">6. Python MySQL</div>
+          <div class="course-details">10 bài học</div>
+        </div>
+        <div class="lessons" id="lesson6">
+          <div class="lesson-item">
+            1. Create Database
+            <span class="lesson-duration">02:20</span>
+          </div>
+          <div class="lesson-item">
+            2. Insert Into Table <span class="lesson-duration">03:23</span>
+          </div>
+          <div class="lesson-item">
+            3. Select From
+            <span class="lesson-duration">01:40</span>
+          </div>
+          <div class="lesson-item">
+            4. Order By
+            <span class="lesson-duration">01:55</span>
+          </div>
+          <div class="lesson-item">
+            5. Delete From By
+            <span class="lesson-duration">02:10</span>
+          </div>
+          <div class="lesson-item">
+            6. Drop Table
+            <span class="lesson-duration">03:40</span>
+          </div>
+          <div class="lesson-item">
+            7. Update Table
+            <span class="lesson-duration">06:30</span>
+          </div>
+          <div class="lesson-item">
+            8. Where
+            <span class="lesson-duration">03:20</span>
+          </div>
+          <div class="lesson-item">
+            9. Limit
+            <span class="lesson-duration">05:34</span>
+          </div>
+          <div class="lesson-item">
+            10. Join
+            <span class="lesson-duration">02:20</span>
+          </div>
+        </div>
+        <div class="course-item" onclick="toggleLessons('lesson7')">
+          <div class="course-title">7. Module Reference</div>
+          <div class="course-details">5 bài học</div>
+        </div>
+        <div class="lessons" id="lesson7">
+          <div class="lesson-item">
+            1. Random Module
+            <span class="lesson-duration">03:20</span>
+          </div>
+          <div class="lesson-item">
+            2. Requests Module
+            <span class="lesson-duration">02:50</span>
+          </div>
+          <div class="lesson-item">
+            3. statistics Module
+            <span class="lesson-duration">04:20</span>
+          </div>
+          <div class="lesson-item">
+            4. math Module
+            <span class="lesson-duration">03:12</span>
+          </div>
+          <div class="lesson-item">
+            1. cmath Module
+            <span class="lesson-duration">04:20</span>
+          </div>
+        </div>
+        <div class="course-item" onclick="toggleLessons('lesson8')">
+          <div class="course-title">8. Python Examples</div>
+          <div class="course-details">8 bài học</div>
+        </div>
+        <div class="lessons" id="lesson8">
+          <div class="lesson-item">
+            1. Examples
+            <span class="lesson-duration">02:20</span>
+          </div>
+          <div class="lesson-item">
+            2. Online Compiler <span class="lesson-duration">03:23</span>
+          </div>
+          <div class="lesson-item">
+            3. Exercises
+            <span class="lesson-duration">01:40</span>
+          </div>
+          <div class="lesson-item">
+            4. Quiz
+            <span class="lesson-duration">01:55</span>
+          </div>
+          <div class="lesson-item">
+            5. Server
+            <span class="lesson-duration">02:10</span>
+          </div>
+          <div class="lesson-item">
+            6. Interview Questions
+            <span class="lesson-duration">03:40</span>
+          </div>
+          <div class="lesson-item">
+            7. Bootcamp
+            <span class="lesson-duration">06:30</span>
+          </div>
+          <div class="lesson-item">
+            8. Certificate
+            <span class="lesson-duration">03:20</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleLessons(lessonId) {
+        const lessons = document.getElementById(lessonId);
+        lessons.style.display =
+          lessons.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>

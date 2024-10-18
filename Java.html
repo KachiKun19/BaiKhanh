@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Java</title>
+    <link rel="stylesheet" href="stylesPython.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Courses Java</h1>
+      <div class="course-list">
+        <div class="course-item" onclick="toggleLessons('lesson1')">
+          <div class="course-title">1. Java Basics</div>
+          <div class="course-details">10 lessons</div>
+        </div>
+        <div class="lessons" id="lesson1">
+          <div class="lesson-item">
+            1. Java Getting Started
+            <span class="lesson-duration">03:45</span>
+          </div>
+          <div class="lesson-item">
+            2. Syntax <span class="lesson-duration">02:50</span>
+          </div>
+          <div class="lesson-item">
+            3. Variables <span class="lesson-duration">03:35</span>
+          </div>
+          <div class="lesson-item">
+            4. Data Types
+            <span class="lesson-duration">03:20</span>
+          </div>
+          <div class="lesson-item">
+            5. Operators
+            <span class="lesson-duration">03:40</span>
+          </div>
+          <div class="lesson-item">
+            6. Control Flow
+            <span class="lesson-duration">04:05</span>
+          </div>
+          <div class="lesson-item">
+            7. Methods
+            <span class="lesson-duration">03:10</span>
+          </div>
+          <div class="lesson-item">
+            8. Loops
+            <span class="lesson-duration">03:50</span>
+          </div>
+          <div class="lesson-item">
+            9. Arrays
+            <span class="lesson-duration">04:25</span>
+          </div>
+          <div class="lesson-item">
+            10. Object-Oriented Programming
+            <span class="lesson-duration">05:00</span>
+          </div>
+        </div>
+
+        <div class="course-item" onclick="toggleLessons('lesson2')">
+          <div class="course-title">2. Java File Handling</div>
+          <div class="course-details">4 lessons</div>
+        </div>
+        <div class="lessons" id="lesson2">
+          <div class="lesson-item">
+            1. Introduction to File Handling
+            <span class="lesson-duration">03:10</span>
+          </div>
+          <div class="lesson-item">
+            2. File Reading <span class="lesson-duration">02:30</span>
+          </div>
+          <div class="lesson-item">
+            3. File Writing
+            <span class="lesson-duration">03:05</span>
+          </div>
+          <div class="lesson-item">
+            4. File Deletion
+            <span class="lesson-duration">01:45</span>
+          </div>
+        </div>
+
+        <div class="course-item" onclick="toggleLessons('lesson3')">
+          <div class="course-title">3. Java Collections Framework</div>
+          <div class="course-details">5 lessons</div>
+        </div>
+        <div class="lessons" id="lesson3">
+          <div class="lesson-item">
+            1. Introduction to Collections
+            <span class="lesson-duration">04:00</span>
+          </div>
+          <div class="lesson-item">
+            2. Lists and ArrayLists
+            <span class="lesson-duration">03:20</span>
+          </div>
+          <div class="lesson-item">
+            3. Sets and HashSets
+            <span class="lesson-duration">03:50</span>
+          </div>
+          <div class="lesson-item">
+            4. Maps and HashMaps
+            <span class="lesson-duration">04:10</span>
+          </div>
+          <div class="lesson-item">
+            5. Iterators
+            <span class="lesson-duration">02:55</span>
+          </div>
+        </div>
+
+        <div class="course-item" onclick="toggleLessons('lesson4')">
+          <div class="course-title">4. Java Exception Handling</div>
+          <div class="course-details">3 lessons</div>
+        </div>
+        <div class="lessons" id="lesson4">
+          <div class="lesson-item">
+            1. Introduction to Exceptions
+            <span class="lesson-duration">03:45</span>
+          </div>
+          <div class="lesson-item">
+            2. Try-Catch Blocks
+            <span class="lesson-duration">02:55</span>
+          </div>
+          <div class="lesson-item">
+            3. Throwing and Handling Exceptions
+            <span class="lesson-duration">03:30</span>
+          </div>
+        </div>
+
+        <div class="course-item" onclick="toggleLessons('lesson5')">
+          <div class="course-title">5. Java Advanced Topics</div>
+          <div class="course-details">6 lessons</div>
+        </div>
+        <div class="lessons" id="lesson5">
+          <div class="lesson-item">
+            1. Multithreading
+            <span class="lesson-duration">05:20</span>
+          </div>
+          <div class="lesson-item">
+            2. Generics
+            <span class="lesson-duration">04:00</span>
+          </div>
+          <div class="lesson-item">
+            3. Lambda Expressions
+            <span class="lesson-duration">04:30</span>
+          </div>
+          <div class="lesson-item">
+            4. Streams API
+            <span class="lesson-duration">03:40</span>
+          </div>
+          <div class="lesson-item">
+            5. Reflection
+            <span class="lesson-duration">05:00</span>
+          </div>
+          <div class="lesson-item">
+            6. Java 8 Features
+            <span class="lesson-duration">04:15</span>
+          </div>
+        </div>
+
+        <div class="course-item" onclick="toggleLessons('lesson6')">
+          <div class="course-title">6. Java Frameworks</div>
+          <div class="course-details">4 lessons</div>
+        </div>
+        <div class="lessons" id="lesson6">
+          <div class="lesson-item">
+            1. Spring Framework
+            <span class="lesson-duration">06:00</span>
+          </div>
+          <div class="lesson-item">
+            2. Hibernate ORM
+            <span class="lesson-duration">05:30</span>
+          </div>
+          <div class="lesson-item">
+            3. JavaServer Faces (JSF)
+            <span class="lesson-duration">04:40</span>
+          </div>
+          <div class="lesson-item">
+            4. JavaFX
+            <span class="lesson-duration">03:55</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleLessons(lessonId) {
+        const lessons = document.getElementById(lessonId);
+        lessons.style.display =
+          lessons.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>

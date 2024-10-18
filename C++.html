@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn C++</title>
+    <link rel="stylesheet" href="stylesPython.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Courses C++</h1>
+      <div class="course-list">
+        <div class="course-item" onclick="toggleLessons('lesson1')">
+          <div class="course-title">1. C++ Tutorial</div>
+          <div class="course-details">10 lessons</div>
+        </div>
+        <div class="lessons" id="lesson1">
+          <div class="lesson-item">
+            1. C++ Getting Started
+            <span class="lesson-duration">04:10</span>
+          </div>
+          <div class="lesson-item">
+            2. C++ Syntax <span class="lesson-duration">03:15</span>
+          </div>
+          <div class="lesson-item">
+            3. Variables <span class="lesson-duration">04:00</span>
+          </div>
+          <div class="lesson-item">
+            4. Data Types
+            <span class="lesson-duration">03:45</span>
+          </div>
+          <div class="lesson-item">
+            5. Operators
+            <span class="lesson-duration">04:05</span>
+          </div>
+          <div class="lesson-item">
+            6. Arrays
+            <span class="lesson-duration">02:00</span>
+          </div>
+          <div class="lesson-item">
+            7. Control Structures
+            <span class="lesson-duration">03:20</span>
+          </div>
+          <div class="lesson-item">
+            8. Functions
+            <span class="lesson-duration">03:30</span>
+          </div>
+          <div class="lesson-item">
+            9. Pointers
+            <span class="lesson-duration">05:00</span>
+          </div>
+          <div class="lesson-item">
+            10. Object-Oriented Programming
+            <span class="lesson-duration">06:30</span>
+          </div>
+        </div>
+
+        <div class="course-item" onclick="toggleLessons('lesson2')">
+          <div class="course-title">2. C++ File Handling</div>
+          <div class="course-details">4 lessons</div>
+        </div>
+        <div class="lessons" id="lesson2">
+          <div class="lesson-item">
+            1. File Handling Basics
+            <span class="lesson-duration">03:20</span>
+          </div>
+          <div class="lesson-item">
+            2. File Read <span class="lesson-duration">02:10</span>
+          </div>
+          <div class="lesson-item">
+            3. File Write
+            <span class="lesson-duration">03:05</span>
+          </div>
+          <div class="lesson-item">
+            4. File Deletion
+            <span class="lesson-duration">02:15</span>
+          </div>
+        </div>
+
+        <div class="course-item" onclick="toggleLessons('lesson3')">
+          <div class="course-title">3. C++ Standard Library</div>
+          <div class="course-details">4 lessons</div>
+        </div>
+        <div class="lessons" id="lesson3">
+          <div class="lesson-item">
+            1. STL Basics
+            <span class="lesson-duration">05:30</span>
+          </div>
+          <div class="lesson-item">
+            2. Vectors
+            <span class="lesson-duration">03:40</span>
+          </div>
+          <div class="lesson-item">
+            3. Iterators
+            <span class="lesson-duration">04:20</span>
+          </div>
+          <div class="lesson-item">
+            4. Algorithms
+            <span class="lesson-duration">05:10</span>
+          </div>
+        </div>
+
+        <div class="course-item" onclick="toggleLessons('lesson4')">
+          <div class="course-title">4. C++ Data Structures</div>
+          <div class="course-details">6 lessons</div>
+        </div>
+        <div class="lessons" id="lesson4">
+          <div class="lesson-item">
+            1. Introduction to Data Structures
+            <span class="lesson-duration">05:00</span>
+          </div>
+          <div class="lesson-item">
+            2. Linked Lists
+            <span class="lesson-duration">04:30</span>
+          </div>
+          <div class="lesson-item">
+            3. Stacks
+            <span class="lesson-duration">03:20</span>
+          </div>
+          <div class="lesson-item">
+            4. Queues
+            <span class="lesson-duration">04:05</span>
+          </div>
+          <div class="lesson-item">
+            5. Trees
+            <span class="lesson-duration">06:40</span>
+          </div>
+          <div class="lesson-item">
+            6. Hash Maps
+            <span class="lesson-duration">05:50</span>
+          </div>
+        </div>
+
+        <div class="course-item" onclick="toggleLessons('lesson5')">
+          <div class="course-title">5. C++ Advanced Topics</div>
+          <div class="course-details">7 lessons</div>
+        </div>
+        <div class="lessons" id="lesson5">
+          <div class="lesson-item">
+            1. Multithreading
+            <span class="lesson-duration">07:30</span>
+          </div>
+          <div class="lesson-item">
+            2. Smart Pointers
+            <span class="lesson-duration">04:10</span>
+          </div>
+          <div class="lesson-item">
+            3. Lambda Expressions
+            <span class="lesson-duration">05:00</span>
+          </div>
+          <div class="lesson-item">
+            4. Exception Handling
+            <span class="lesson-duration">04:15</span>
+          </div>
+          <div class="lesson-item">
+            5. File Streams
+            <span class="lesson-duration">03:45</span>
+          </div>
+          <div class="lesson-item">
+            6. Templates
+            <span class="lesson-duration">06:20</span>
+          </div>
+          <div class="lesson-item">
+            7. Move Semantics
+            <span class="lesson-duration">05:50</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleLessons(lessonId) {
+        const lessons = document.getElementById(lessonId);
+        lessons.style.display =
+          lessons.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>
