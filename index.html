@@ -6,18 +6,18 @@
     <title>Create CV</title>
     <style>
       /* CSS bắt đầu */
-
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f4;
+        background-color: #eef2f5;
       }
 
       header {
-        background-color: #4caf50; /* Green header */
+        background-color: #3498db; /* Xanh dương đẹp hơn */
         color: white;
         padding: 10px 20px;
+        text-align: center;
       }
 
       nav ul {
@@ -26,17 +26,18 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        margin: 0;
       }
 
       nav ul li {
-        display: inline;
-        margin-right: 20px;
+        margin: 0 15px;
       }
 
       nav a {
         color: white;
         text-decoration: none;
         font-weight: bold;
+        font-size: 1.1rem;
       }
 
       nav a:hover {
@@ -45,66 +46,69 @@
 
       main {
         padding: 20px;
-        max-width: 800px;
-        margin: auto;
-        background-color: #ffffff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 900px;
+        margin: 20px auto;
+        background-color: white;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
       }
 
       h1,
       h2 {
-        color: #333;
+        color: #2c3e50;
       }
 
       #loginSection {
-        background-color: #007bff; /* Ocean blue */
+        background-color: #2980b9; /* Xanh đậm hơn */
         color: white;
         padding: 20px;
         border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
       }
 
       form {
-        background-color: #6a5acd; /* Purple blue */
+        background-color: #34495e;
         padding: 20px;
         border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       }
 
       label {
         display: block;
         margin: 10px 0 5px;
         color: white;
+        font-weight: bold;
       }
 
       input[type="text"],
       input[type="email"],
       input[type="tel"],
-      input[type="file"],
       input[type="password"],
       textarea,
       select {
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         margin: 5px 0 15px;
-        border: 1px solid #ccc;
+        border: none;
         border-radius: 4px;
-        background-color: #f9f9f9; /* Light background for better contrast */
-        color: #333; /* Dark text for readability */
+        background-color: #ecf0f1; /* Tạo sự tương phản tốt hơn */
+        color: #34495e;
+        font-size: 1rem;
       }
 
       button {
-        background-color: #4caf50; /* Green button */
+        background-color: #27ae60; /* Nút xanh lá cây */
         color: white;
-        padding: 10px 15px;
+        padding: 12px 20px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         margin-right: 10px;
+        font-size: 1rem;
       }
 
       button:hover {
-        background-color: #45a049;
+        background-color: #218c53;
       }
 
       button:focus {
@@ -122,11 +126,12 @@
       footer {
         text-align: center;
         padding: 15px;
-        background-color: #333;
+        background-color: #2c3e50;
         color: white;
         position: relative;
         bottom: 0;
         width: 100%;
+        margin-top: 20px;
       }
 
       textarea {
@@ -136,9 +141,7 @@
       /* Responsive Design */
       @media (max-width: 600px) {
         nav ul {
-          display: flex;
           flex-direction: column;
-          align-items: center;
         }
 
         nav ul li {
@@ -151,18 +154,124 @@
         }
       }
 
+      .cv-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .cv-header {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+      }
+
+      .profile-picture {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      .cv-header-info h3 {
+        margin: 0;
+        color: #2c3e50;
+      }
+
+      .cv-header-info p {
+        margin: 5px 0;
+        color: #34495e;
+      }
+
+      .cv-body {
+        margin-top: 20px;
+      }
+
+      .cv-section {
+        margin-bottom: 20px;
+      }
+
+      .cv-section h4 {
+        margin-bottom: 10px;
+        color: #2980b9;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+      }
+
+      .cv-section p,
+      .cv-section ul {
+        margin: 0;
+        color: #34495e;
+      }
+
+      .cv-section ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      .cv-section ul li {
+        margin-bottom: 10px;
+      }
       /* Additional Styles for CV Preview */
       #cvPreview {
         background-color: #f9f9f9;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
       }
 
       #cvPreview img {
         max-width: 150px;
         border-radius: 4px;
         margin-top: 10px;
+      }
+
+      /* About Section */
+      #aboutSection {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      #aboutSection h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      #aboutSection p {
+        color: #34495e;
+        margin: 5px 0;
+      }
+
+      #aboutSection ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      #aboutSection ul li {
+        margin: 10px 0;
+        color: #34495e;
+      }
+
+      .back-btn {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+
+      .back-btn:hover {
+        background-color: #2980b9;
       }
     </style>
   </head>
@@ -175,10 +284,11 @@
           <li><a href="#" id="homeLink">Home</a></li>
           <li><a href="#" id="aboutLink">About</a></li>
           <li>
-            <a href="#" id="labsLink">Labs</a>
-            <div class="dropdown">
-              <a href="">Lab1</a>
-              <a href="Lab2.html">Lab2</a>
+            <a href="#" id="LabsLink">Labs</a>
+            <div class="lessons" id="lesson">
+              <div class="lesson-item"><a href="">1. Lab1</a></div>
+              <div class="lesson-item"><a href="Lab2.html">2. Lab2</a></div>
+              <div class="lesson-item"><a href="Lab3_1.html">3. Lab3</a></div>
             </div>
           </li>
         </ul>
@@ -257,13 +367,6 @@
           <textarea id="experience" rows="4"></textarea>
 
           <button type="submit">Create CV</button>
-          <button type="button" id="editBtn" style="display: none">
-            Edit CV
-          </button>
-          <button type="button" id="deleteBtn" style="display: none">
-            Delete CV
-          </button>
-          <button type="button" id="cancelBtn">Cancel</button>
         </form>
       </section>
 
@@ -272,66 +375,131 @@
         <div id="previewContent"></div>
       </section>
 
-      <section id="about" style="display: none">
-        <h2>About</h2>
-        <p>Information about us and the services we provide.</p>
-      </section>
+      <!-- About Section -->
+      <section id="aboutSection" style="display: none">
+        <button id="backBtn" class="back-btn">Back</button>
+        <h2>Curriculum Vitae</h2>
+        <div class="cv-container">
+          <div class="cv-header">
+            <img
+              src="images/AvatarCV.jpg"
+              alt="Profile Picture"
+              class="profile-picture"
+            />
+            <div class="cv-header-info">
+              <h3>Ngô Quang Khánh</h3>
+              <p>Kỹ sư phần mềm</p>
+              <p>Địa chỉ: Quận A, Hà Nội</p>
+              <p>Email: hello@example.com</p>
+              <p>Điện thoại: 0123 456 789</p>
+            </div>
+          </div>
 
-      <section id="labs" style="display: none">
-        <h2>Labs</h2>
-        <p>Explore tools and resources to help you create your CV.</p>
+          <div class="cv-body">
+            <div class="cv-section">
+              <h4>Mục tiêu nghề nghiệp</h4>
+              <p>
+                Đem lại giá trị cao cho doanh nghiệp, không ngừng phát triển bản
+                thân và nỗ lực cống hiến cho sự phát triển của công ty.
+              </p>
+            </div>
+
+            <div class="cv-section">
+              <h4>Kỹ năng</h4>
+              <ul>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>CSS, HTML</li>
+                <li>Quản lý dự án Agile</li>
+              </ul>
+            </div>
+
+            <div class="cv-section">
+              <h4>Kinh nghiệm làm việc</h4>
+              <ul>
+                <li>
+                  <strong>Công ty XYZ</strong> - Kỹ sư phần mềm (2020 - Hiện
+                  tại)
+                  <p>
+                    Phát triển và duy trì các ứng dụng web với công nghệ
+                    JavaScript, React.
+                  </p>
+                </li>
+                <li>
+                  <strong>Công ty ABC</strong> - Lập trình viên (2018 - 2020)
+                  <p>
+                    Phát triển hệ thống quản lý nội bộ bằng Python và Django.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="cv-section">
+              <h4>Học vấn</h4>
+              <ul>
+                <li>
+                  Cử nhân Công nghệ thông tin - Đại học Nông Lâm TP.HCM (2024 -
+                  2028)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2024 CV Creator. All rights reserved.</p>
+      <p>&copy; 2024 Nguyễn Văn A. All rights reserved.</p>
     </footer>
 
     <script>
+      // Bắt sự kiện
       // JavaScript bắt đầu
-
       document.addEventListener("DOMContentLoaded", () => {
-        // Elements
         const signInBtn = document.getElementById("signInBtn");
         const logOutBtn = document.getElementById("logOutBtn");
         const homeLink = document.getElementById("homeLink");
         const aboutLink = document.getElementById("aboutLink");
-        const labsLink = document.getElementById("labsLink");
-
         const loginSection = document.getElementById("loginSection");
         const homeSection = document.getElementById("home");
-        const aboutSection = document.getElementById("about");
-        const labsSection = document.getElementById("labs");
+        const aboutSection = document.getElementById("aboutSection");
         const cvPreviewSection = document.getElementById("cvPreview");
 
         const loginForm = document.getElementById("loginForm");
-        const registerBtn = document.getElementById("registerBtn");
-        const logOut = document.getElementById("logOutBtn");
 
-        const cvForm = document.getElementById("cvForm");
-        const previewImage = document.getElementById("preview");
-        const previewContent = document.getElementById("previewContent");
-        const editBtn = document.getElementById("editBtn");
-        const deleteBtn = document.getElementById("deleteBtn");
-        const cancelBtn = document.getElementById("cancelBtn");
-
-        // User Authentication (Simplified for Demo)
+        // User Authentication
         let isLoggedIn = false;
         let user = {};
 
-        // Navigation
-        function showSection(section) {
+        function showSection(sectionToShow) {
           loginSection.style.display = "none";
           homeSection.style.display = "none";
           aboutSection.style.display = "none";
-          labsSection.style.display = "none";
           cvPreviewSection.style.display = "none";
-
-          section.style.display = "block";
+          sectionToShow.style.display = "block";
         }
 
-        signInBtn.addEventListener("click", () => {
-          showSection(loginSection);
+        // Xử lý sự kiện khi nhấn vào About
+        aboutLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          showSection(aboutSection); // Hiển thị phần about
+        });
+
+        // Xử lý sự kiện khi nhấn nút "Back"
+        const backBtn = document.getElementById("backBtn");
+        if (backBtn) {
+          backBtn.addEventListener("click", () => {
+            showSection(homeSection); // Hiển thị phần home
+          });
+        }
+
+        loginForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          isLoggedIn = true;
+          user.username = document.getElementById("username").value;
+          signInBtn.style.display = "none";
+          logOutBtn.style.display = "inline";
+          showSection(homeSection);
         });
 
         logOutBtn.addEventListener("click", () => {
@@ -346,207 +514,33 @@
           if (isLoggedIn) {
             showSection(homeSection);
           } else {
-            showSection(loginSection);
+            alert("Please sign in first!");
           }
         });
-
-        aboutLink.addEventListener("click", () => {
-          showSection(aboutSection);
-        });
-
-        labsLink.addEventListener("click", () => {
-          showSection(labsSection);
-        });
-
-        // Login Form Submission
-        loginForm.addEventListener("submit", (e) => {
-          e.preventDefault();
-          const username = document.getElementById("username").value.trim();
-          const password = document.getElementById("password").value.trim();
-
-          // Simple authentication (Replace with real authentication)
-          if (username && password) {
-            isLoggedIn = true;
-            user.username = username;
-            signInBtn.style.display = "none";
-            logOutBtn.style.display = "inline";
-            showSection(homeSection);
-            loginForm.reset();
-          } else {
-            alert("Please enter valid credentials.");
-          }
-        });
-
-        // Register Button
-        registerBtn.addEventListener("click", () => {
-          alert("Registration feature is not implemented yet.");
-        });
-
-        // CV Form Submission
-        cvForm.addEventListener("submit", (e) => {
-          e.preventDefault();
-
-          // Collect form data
-          const fullName = document.getElementById("fullName").value.trim();
-          const email = document.getElementById("email").value.trim();
-          const phone = document.getElementById("phone").value.trim();
-          const role = document.getElementById("role").value;
-          const profilePicture =
-            document.getElementById("profilePicture").files[0];
-          const education = document.getElementById("education").value.trim();
-          const careerGoals = document
-            .getElementById("careerGoals")
-            .value.trim();
-          const skills = document.getElementById("skills").value.trim();
-          const interests = document.getElementById("interests").value.trim();
-          const experience = document.getElementById("experience").value.trim();
-
-          // Simple validation
-          if (!fullName || !email || !role) {
-            alert("Please fill in all required fields.");
-            return;
-          }
-
-          // Create CV Preview
-          let cvHTML = `<h3>${fullName}</h3>`;
-          cvHTML += `<p><strong>Email:</strong> ${email}</p>`;
-          if (phone) cvHTML += `<p><strong>Phone:</strong> ${phone}</p>`;
-          cvHTML += `<p><strong>Role:</strong> ${role}</p>`;
-
-          if (profilePicture) {
-            const reader = new FileReader();
-            reader.onload = function (event) {
-              cvHTML += `<img src="${event.target.result}" alt="Profile Picture">`;
-              appendAdditionalInfo();
-            };
-            reader.readAsDataURL(profilePicture);
-          } else {
-            appendAdditionalInfo();
-          }
-
-          function appendAdditionalInfo() {
-            if (education)
-              cvHTML += `<p><strong>Education:</strong> ${education}</p>`;
-            if (careerGoals)
-              cvHTML += `<p><strong>Career Goals:</strong> ${careerGoals}</p>`;
-            if (skills) cvHTML += `<p><strong>Skills:</strong> ${skills}</p>`;
-            if (interests)
-              cvHTML += `<p><strong>Interests:</strong> ${interests}</p>`;
-            if (experience)
-              cvHTML += `<p><strong>Work Experience:</strong> ${experience}</p>`;
-
-            previewContent.innerHTML = cvHTML;
-            showSection(cvPreviewSection);
-            toggleCVButtons(true);
-          }
-
-          // Store CV data (You can enhance this to use localStorage or a backend)
-          user.cv = {
-            fullName,
-            email,
-            phone,
-            role,
-            profilePicture: profilePicture
-              ? URL.createObjectURL(profilePicture)
-              : null,
-            education,
-            careerGoals,
-            skills,
-            interests,
-            experience,
-          };
-        });
-
-        // Image Preview
-        const profilePictureInput = document.getElementById("profilePicture");
-        profilePictureInput.addEventListener("change", function () {
-          const file = this.files[0];
-          if (file) {
-            const reader = new FileReader();
-            reader.onload = function (event) {
-              previewImage.setAttribute("src", event.target.result);
-              previewImage.style.display = "block";
-            };
-            reader.readAsDataURL(file);
-          } else {
-            previewImage.setAttribute("src", "#");
-            previewImage.style.display = "none";
-          }
-        });
-
-        // Edit CV
-        editBtn.addEventListener("click", () => {
-          showSection(homeSection);
-          populateForm(user.cv);
-          toggleCVButtons(false);
-        });
-
-        // Delete CV
-        deleteBtn.addEventListener("click", () => {
-          if (confirm("Are you sure you want to delete your CV?")) {
-            user.cv = null;
-            previewContent.innerHTML = "";
-            showSection(homeSection);
-            cvForm.reset();
-            previewImage.setAttribute("src", "#");
-            previewImage.style.display = "none";
-            toggleCVButtons(false);
-            alert("Your CV has been deleted.");
-          }
-        });
-
-        // Cancel Button
-        cancelBtn.addEventListener("click", () => {
-          if (user.cv) {
-            showSection(cvPreviewSection);
-          } else {
-            cvForm.reset();
-          }
-        });
-
-        // Populate form for editing
-        function populateForm(cv) {
-          document.getElementById("fullName").value = cv.fullName;
-          document.getElementById("email").value = cv.email;
-          document.getElementById("phone").value = cv.phone;
-          document.getElementById("role").value = cv.role;
-          document.getElementById("education").value = cv.education;
-          document.getElementById("careerGoals").value = cv.careerGoals;
-          document.getElementById("skills").value = cv.skills;
-          document.getElementById("interests").value = cv.interests;
-          document.getElementById("experience").value = cv.experience;
-
-          if (cv.profilePicture) {
-            previewImage.setAttribute("src", cv.profilePicture);
-            previewImage.style.display = "block";
-          } else {
-            previewImage.setAttribute("src", "#");
-            previewImage.style.display = "none";
-          }
-        }
-
-        // Toggle CV Buttons
-        function toggleCVButtons(show) {
-          if (show) {
-            editBtn.style.display = "inline-block";
-            deleteBtn.style.display = "inline-block";
-          } else {
-            editBtn.style.display = "none";
-            deleteBtn.style.display = "none";
-          }
-        }
-
-        // Initial View
-        if (isLoggedIn) {
-          signInBtn.style.display = "none";
-          logOutBtn.style.display = "inline";
-          showSection(homeSection);
-        } else {
-          showSection(loginSection);
-        }
       });
+      document
+        .getElementById("LabsLink")
+        .addEventListener("mouseover", function () {
+          document.getElementById("lesson").style.display = "block";
+        });
 
-      // JavaScript kết thúc
+      document
+        .getElementById("LabsLink")
+        .addEventListener("mouseout", function () {
+          document.getElementById("lesson").style.display = "none";
+        });
+
+      document
+        .getElementById("lesson")
+        .addEventListener("mouseover", function () {
+          document.getElementById("lesson").style.display = "block";
+        });
+
+      document
+        .getElementById("lesson")
+        .addEventListener("mouseout", function () {
+          document.getElementById("lesson").style.display = "none";
+        });
     </script>
   </body>
 </html>
