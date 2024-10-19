@@ -1,0 +1,312 @@
+<html>
+ <head>
+  <title>
+   Learning Dashboard
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .navbar {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+        .welcome-section {
+            background-color: #f5f5f5;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .welcome-section img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+        .welcome-section h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .welcome-section a {
+            color: #0073e6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .streak-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .streak-section h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .streak-section p {
+            font-size: 14px;
+            color: #666;
+        }
+        .streak-info {
+            text-align: center;
+        }
+        .streak-info h3 {
+            font-size: 24px;
+            color: #6a1b9a;
+            margin: 0;
+        }
+        .streak-info p {
+            font-size: 14px;
+            color: #666;
+        }
+        .streak-details {
+            text-align: right;
+        }
+        .streak-details p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+        .streak-details a {
+            color: #0073e6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .progress-circle {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: conic-gradient(#0073e6 36%, #e0e0e0 36%);
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .progress-circle::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .courses-section {
+            padding: 20px;
+        }
+        .courses-section h2 {
+            font-size: 24px;
+            margin: 0 0 20px 0;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .tabs a {
+            color: #0073e6;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 14px;
+        }
+        .tabs a.active {
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 5px;
+        }
+        .course-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-right: 20px;
+            width: 200px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .course-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .course-card h3 {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .course-card p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+        .course-card .play-icon {
+            font-size: 24px;
+            color: #0073e6;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .course-card .progress-bar {
+            height: 4px;
+            background-color: #0073e6;
+            border-radius: 2px;
+            margin-top: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="navbar">
+   <div>
+    <a href="#">
+     Business Operations
+    </a>
+    <a href="#">
+     Cloud Computing
+    </a>
+    <a href="#">
+     Cybersecurity
+    </a>
+    <a href="#">
+     Data Science
+    </a>
+    <a href="#">
+     Development
+    </a>
+    <a href="#">
+     IT Operations
+    </a>
+    <a href="#">
+     Language Learning
+    </a>
+    <a href="#">
+     Leadership &amp; Management
+    </a>
+    <a href="#">
+     Marketing
+    </a>
+   </div>
+  </div>
+  <div class="welcome-section">
+   <img alt="User profile picture" height="50" src="image/meo.jpg" width="50"/>
+   <div>
+    <h1>
+     Welcome back, Ngo Quang Khanh
+    </h1>
+    <a href="#">
+     Add occupation and interests
+    </a>
+   </div>
+  </div>
+  <div class="streak-section">
+   <div>
+    <h2>
+     Weekly streak
+    </h2>
+    <p>
+     One ring down, one to go. Keep it up!
+    </p>
+   </div>
+   <div class="streak-info">
+    <h3>
+     <i class="fas fa-fire">
+     </i>
+     2 weeks
+    </h3>
+    <p>
+     Current streak
+    </p>
+   </div>
+   <div class="streak-details">
+    <div class="progress-circle">
+    </div>
+    <p>
+     11/30 course min
+    </p>
+    <p>
+     4/1 visit
+    </p>
+    <p>
+     Oct 13 - 19
+    </p>
+    <a href="#">
+     See all activity
+    </a>
+   </div>
+  </div>
+  <div class="courses-section">
+   <h2>
+    Pick up where you left off
+   </h2>
+   <div class="tabs">
+    <a class="active" href="#">
+     Courses
+    </a>
+    <a href="#">
+     Learning paths
+    </a>
+    <a href="#">
+     Certification preparation
+    </a>
+   </div>
+   <div class="course-card">
+    <img alt="Course thumbnail" height="100" src="image/intro.png" width="200"/>
+    <i class="fas fa-play-circle play-icon">
+    </i>
+    <h3>
+     FPT_ISMS Refresh Training S2 2024 (Video)
+    </h3>
+    <p>
+     1. Introduction
+    </p>
+    <p>
+     Lecture • 1m
+    </p>
+   </div>
+   <div class="course-card">
+    <img alt="Course thumbnail" height="100" src="image/mule.png" width="200"/>
+    <i class="fas fa-play-circle play-icon">
+    </i>
+    <h3>
+     MuleSoft 4.X Complete Guide For Beginners
+    </h3>
+    <p>
+     2. Integration introduction
+    </p>
+    <p>
+     Lecture • 6m left
+    </p>
+    <div class="progress-bar" style="width: 50%;">
+    </div>
+   </div>
+   <div class="course-card">
+    <img alt="Course thumbnail" height="100" src="image/ENGLISH.png" width="200"/>
+    <i class="fas fa-question-circle play-icon">
+    </i>
+    <h3>
+     English Vocabulary: 504 Essential Words
+    </h3>
+    <p>
+     7. Quiz and Questions
+    </p>
+    <p>
+     Quiz • 9 questions
+    </p>
+   </div>
+  </div>
+ </body>
+</html>
