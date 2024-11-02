@@ -1,0 +1,248 @@
+<html>
+ <head>
+  <title>
+   New Unit Test Custom Challenge
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .modal {
+            width: 80%;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .modal-header {
+            background-color: #006eff;
+            color: rgba(255, 255, 255, 0.884);
+            padding: 15px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-header h2 {
+    margin: 0;
+    font-size: 24px; /* Kích thước chữ lớn hơn */
+    font-weight: 600; /* Độ dày chữ */
+    color: #fff; /* Màu chữ trắng */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Đổ bóng chữ */
+    letter-spacing: 1px; /* Khoảng cách giữa các chữ cái */
+}
+        .modal-header .close {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .modal-content {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            width: 29%;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow nổi bật */
+    text-align: center;
+    transition: transform 0.2s; /* Hiệu ứng khi hover */    
+}
+
+.card:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+
+        }
+        .card img {
+    max-width: 70px; /* Tăng kích thước hình ảnh */
+    margin-bottom: 10px;
+    border-radius: 50%; /* Bo tròn hình ảnh */
+    border: 2px solid #ffffff; /* Viền màu xanh */
+    transition: transform 0.2s, box-shadow 0.2s; /* Hiệu ứng mượt mà khi hover */
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Phóng to hình ảnh */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+}
+        .card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .card .btn {
+    background-color: #007bff; /* Màu nền chính */
+    color: white; /* Màu chữ */
+    border: none; /* Không viền */
+    padding: 10px 20px; /* Padding */
+    border-radius: 5px; /* Bo tròn */
+    cursor: pointer; /* Con trỏ khi hover */
+    transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng mượt mà */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Bóng cho nút */
+}
+
+.card .btn:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.card .btn-guide {
+    background-color: #e0e0e085; /* Màu nền cho nút guide */
+    color: #333; /* Màu chữ cho nút guide */
+}
+
+.card .btn-guide:hover {
+    background-color: #31d111b6; /* Màu nền khi hover cho nút guide */
+}
+
+        .badge {
+    background-color: rgba(0, 0, 0, 0.644); /* Màu nền đen */
+    color: white; /* Màu chữ trắng */
+    padding: 5px 10px; /* Khoảng cách bên trong */
+    border-radius: 5px; /* Bo góc */
+    font-size: 14px; /* Kích thước chữ */
+    margin-left: 5px; /* Khoảng cách bên trái */
+}
+.badge:hover {
+    background-color: #161616; /* Màu nền khi hover */
+}
+  </style>
+ </head>
+ <body>
+  <div class="modal">
+   <div class="modal-header">
+    <h2>
+     New unit test custom challenge
+    </h2>
+    <span class="close">
+     ×
+    </span>
+   </div>
+   <div class="modal-content">
+    <div class="card">
+     <img alt="JavaScript Mocha logo" height="50" src="https://storage.googleapis.com/a1aa/image/mlHVAUb2UU5AJdIfGUiXBl9pq174qQVfCluPbZZMrfeTNLzOB.jpg" width="50"/>
+     <h3>
+      JavaScript
+      <span class="badge">
+       Mocha
+      </span>
+     </h3>
+     <p>
+      Use the Mocha testing framework and create unit tests to grade solutions.
+     </p>
+     <button class="btn">
+      Continue
+     </button>
+     <button class="btn btn-guide">
+      Guide
+     </button>
+    </div>
+    <div class="card">
+     <img alt="TypeScript Mocha logo" height="50" src="https://storage.googleapis.com/a1aa/image/ghOfQe8ktjn6jUw1dHtfMaAkz8gm9g6s31swVrXBq1GwmlZnA.jpg" width="50"/>
+     <h3>
+      TypeScript
+      <span class="badge">
+       Mocha
+      </span>
+     </h3>
+     <p>
+      Use the Mocha testing framework and create unit tests to grade solutions.
+     </p>
+     <button class="btn">
+      Continue
+     </button>
+     <button class="btn btn-guide">
+      Guide
+     </button>
+    </div>
+    <div class="card">
+     <img alt="Python pytest logo" height="50" src="https://storage.googleapis.com/a1aa/image/IICfnqevPysoH0BfQ8AGFGqa88XWlRtZ04kyh8Lt7ZurmlZnA.jpg" width="50"/>
+     <h3>
+      Python
+      <span class="badge">
+       pytest
+      </span>
+     </h3>
+     <p>
+      pytest is the most popular and fully-featured Python testing framework.
+     </p>
+     <button class="btn">
+      Continue
+     </button>
+     <button class="btn btn-guide">
+      Guide
+     </button>
+    </div>
+    <div class="card">
+     <img alt="PHP PHPUnit logo" height="50" src="https://storage.googleapis.com/a1aa/image/fBpUpiLom7UqNyiGWfTv8bcr9nJwNwkzdAo1Jn7jJ0BazysTA.jpg" width="50"/>
+     <h3>
+      PHP
+      <span class="badge">
+       PHPUnit
+      </span>
+     </h3>
+     <p>
+      PHPUnit is a programmer-oriented testing framework for PHP.
+     </p>
+     <button class="btn">
+      Continue
+     </button>
+     <button class="btn btn-guide">
+      Guide
+     </button>
+    </div>
+    <div class="card">
+     <img alt="Java JUnit logo" height="50" src="https://storage.googleapis.com/a1aa/image/isaBZsxQcIrjABiyCfygnfKDNaqIafX3FWxv1Bnxim4mmlZnA.jpg" width="50"/>
+     <h3>
+      Java
+      <span class="badge">
+       JUnit
+      </span>
+     </h3>
+     <p>
+      JUnit is a popular unit-testing framework in the Java ecosystem.
+     </p>
+     <button class="btn">
+      Continue
+     </button>
+     <button class="btn btn-guide">
+      Guide
+     </button>
+    </div>
+    <div class="card">
+     <img alt="Kotlin JUnit logo" height="50" src="https://storage.googleapis.com/a1aa/image/XaCI3kJhHDqrN90igXSn7OeOfDecQhIe1uSNo7Pvk8gcNLzOB.jpg" width="50"/>
+     <h3>
+      Kotlin
+      <span class="badge">
+       JUnit
+      </span>
+     </h3>
+     <p>
+      JUnit is a popular unit-testing framework in the Kotlin ecosystem.
+     </p>
+     <button class="btn">
+      Continue
+     </button>
+     <button class="btn btn-guide">
+      Guide
+     </button>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
