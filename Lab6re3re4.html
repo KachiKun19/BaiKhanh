@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Custom Challenge</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 0;
+        color: #495057;
+      }
+      .container {
+        width: 70%;
+        margin: 50px auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding-bottom: 100px; /* To ensure footer stays visible when content is long */
+      }
+      .header {
+        background-color: #007bff;
+        color: white;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #e9ecef;
+      }
+      .header h2 {
+        margin: 0;
+        font-size: 2rem;
+        letter-spacing: 0.5px;
+      }
+      .header .close-btn {
+        font-size: 30px;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+      .header .close-btn:hover {
+        color: #ff4d4f;
+      }
+      .form-group {
+        margin-bottom: 20px;
+        padding: 0 30px;
+      }
+      .form-group label {
+        font-weight: 600;
+        color: #343a40;
+        font-size: 1.1rem;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        font-size: 1rem;
+        margin-top: 8px;
+        transition: all 0.3s;
+        background-color: #f8f9fa;
+      }
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: #80bdff;
+        outline: none;
+      }
+      .form-group textarea {
+        height: 130px;
+        resize: vertical;
+      }
+      .editor-toolbar {
+        background-color: #f1f3f5;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #ced4da;
+      }
+      .editor-toolbar button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #495057;
+        font-size: 20px;
+        padding: 8px;
+        transition: color 0.3s;
+      }
+      .editor-toolbar button:hover {
+        color: #007bff;
+      }
+      .editor-content {
+        padding: 20px 30px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 30px;
+        background-color: #f8f9fa;
+        border-top: 2px solid #e9ecef;
+        position: sticky;
+        bottom: 0;
+        z-index: 10;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .footer button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        box-shadow: 0 5px 12px rgba(0, 123, 255, 0.3);
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .footer button:hover {
+        background-color: #218838;
+        transform: translateY(-2px);
+      }
+      .footer .starter-btn {
+        background-color: #007bff;
+        padding: 12px 20px;
+        color: white;
+        border: none;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        box-shadow: 0 5px 12px rgba(0, 123, 255, 0.3);
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .footer .starter-btn:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+      }
+      .dropdowns {
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .dropdowns .form-group {
+        width: 48%;
+      }
+      .section {
+        padding: 20px 30px;
+        background-color: #f8f9fa;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+      .section h3 {
+        font-size: 1.5rem;
+        color: #007bff;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+      }
+      .section .test-case-row {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+      }
+      .section .test-case-row input {
+        width: 48%;
+      }
+      .section .test-case-row span {
+        align-self: center;
+        font-size: 1.5rem;
+        color: #495057;
+      }
+      .section .test-case-row input[type="text"] {
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ced4da;
+        background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Edit Custom Challenge</h2>
+        <span class="close-btn">&times;</span>
+      </div>
+      <div class="form-group">
+        <label>Last modified by sontth1@fpt.com on Apr 01 2024</label>
+        <input type="text" value="DSA ET Opt7 01" />
+      </div>
+      <div class="form-group">
+        <label>Difficulty:</label>
+        <select>
+          <option>Easy</option>
+          <option>Medium</option>
+          <option>Hard</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Short Description:</label>
+        <input type="text" value="This is a private challenge" />
+      </div>
+      <div class="form-group">
+        <label>Normal</label>
+        <div class="editor-toolbar">
+          <div>
+            <button><b>B</b></button>
+            <button><i>I</i></button>
+            <button><u>U</u></button>
+            <button><s>S</s></button>
+            <button><i class="fas fa-list-ul"></i></button>
+            <button><i class="fas fa-list-ol"></i></button>
+            <button><i class="fas fa-code"></i></button>
+            <button><i class="fas fa-link"></i></button>
+          </div>
+          <div>
+            <button><i class="fas fa-undo"></i></button>
+            <button><i class="fas fa-redo"></i></button>
+          </div>
+        </div>
+        <div class="editor-content">
+          <p>
+            Write a program to count the number of elements as odd numbers in
+            the array
+          </p>
+          <p>Example: Array A = { 12, 31, 25, 17, 40, 10, 29}</p>
+          <p>=&gt; Number of elements as odd number in array A is : 4</p>
+        </div>
+      </div>
+      <div class="footer">
+        <button class="starter-btn">
+          Starter code will automatically be generated for all 18 coding
+          languages
+        </button>
+        <button>Update Custom Challenge</button>
+      </div>
+      <div class="dropdowns">
+        <div class="form-group">
+          <label>Input type</label>
+          <select>
+            <option>Array of integers</option>
+            <option>String</option>
+            <option>Integer</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Output type</label>
+          <select>
+            <option>Array of integers</option>
+            <option>String</option>
+            <option>Integer</option>
+          </select>
+        </div>
+      </div>
+      <div class="section">
+        <h3>Required Test Cases <i class="fas fa-info-circle"></i></h3>
+        <div class="test-case-row">
+          <input type="text" placeholder="Input 1" />
+          <span>→</span>
+          <input type="text" placeholder="Expected Output" />
+        </div>
+        <div class="test-case-row">
+          <input type="text" placeholder="Input 2" />
+          <span>→</span>
+          <input type="text" placeholder="Expected Output" />
+        </div>
+        <div class="test-case-row">
+          <input type="text" placeholder="Input 3" />
+          <span>→</span>
+          <input type="text" placeholder="Expected Output" />
+        </div>
+        <!-- Add more test cases as needed -->
+      </div>
+    </div>
+  </body>
+</html>
